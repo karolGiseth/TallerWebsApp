@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+<title>Register Employee</title>
+</h:head>
+<h:form>
+<p:growl id="messages"></p:growl>
+<p:panelGrid columns="2">
+<p:outputLabel value="Ingrese el nombre:"></p:outputLabel>
+<p:inputText
+value="#{manejadorEmpleado.empleado.nombre}"></p:inputText>
+<p:outputLabel value="Ingrese la fecha de
+contratación:"></p:outputLabel>
+<p:calendar
+value="#{manejadorEmpleado.empleado.fechaContrato}"></p:calendar>
+<p:outputLabel value="Ingrese el salario:"></p:outputLabel>
+<p:inputText
+value="#{manejadorEmpleado.empleado.salario}"></p:inputText>
+</p:panelGrid>
+<p:commandButton value="Register" action="#{manejadorEmpleado.register}"
+update="messages"></p:commandButton>
+</h:form>
+</html>

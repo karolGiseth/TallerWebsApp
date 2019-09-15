@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="co.edu.uan.empleados.modelo.Empleado" table="empleado">
+<id name="id" type="long">
+<column name="EMP_ID" />
+<generator class="identity" />
+</id>
+<property name="nombre" type="string">
+<column name="EMP_NOMBRE" length="500" />
+</property>
+<property name="fechaContrato" type="date">
+<column name="EMP_FECHA_CONTRATO" length="10" not-null="true" />
+</property>
+<property name="salario" type="long">
+<column name="EMP_SALARIO" />
+</property>
+</class>
+</hibernate-mapping>

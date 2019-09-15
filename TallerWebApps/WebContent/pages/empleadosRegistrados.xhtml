@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+<title>Register Employee</title>
+</h:head>
+<h:form>
+<p:dataTable var="emp" value="#{manejadorEmpleado.listaEmpleados}">
+<p:column headerText="Id">
+<h:outputText value="#{emp.id}" />
+</p:column>
+<p:column headerText="Nombre">
+<h:outputText value="#{emp.nombre}" />
+</p:column>
+<p:column headerText="Salario">
+<h:outputText value="#{emp.salario}" />
+</p:column>
+</p:dataTable>
+<br />
+<p:commandButton value="Regresar al inicio"
+action="regresarInicio"></p:commandButton>
+</h:form>
+</html>
